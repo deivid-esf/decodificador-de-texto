@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="img/Frame 6.svg">
+  <title>Decodificador de textos</title>
+  <link rel="stylesheet" href="css/reset.css" />
+  <link rel="stylesheet" href="css/root.css" />
+  <link rel="stylesheet" href="css/area-entrada.css" />
+  <link rel="stylesheet" href="css/area-saida.css" />
+  <link rel="stylesheet" href="css/footer.css" />
+  <link rel="stylesheet" href="css/logo.css" />
+  <link rel="stylesheet" href="css/container.css" />
+</head>
+
+<body>
+  <main>
+    <section class="container largura-limitada">
+      <img class="logo" src="img/alura.svg" alt="Logo Alura" />
+
+      <div class="area-entrada">
+        <textarea id="textoescrito" class="entrada__texto" placeholder="Digite seu texto"></textarea>
+
+        <div class="entrada__submit">
+          <div class="entrada__aviso">
+            <img src="img/bi_exclamation-circle-fill.svg" alt="Ponto de exclamação" />
+            <p>Apenas letras minúsculas e sem acentos</p>
+          </div>
+
+          <div class="entrada__buttons">
+            <button id="criptografar">Criptografar</button>
+            <button id="descriptografar">Descriptografar</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="area-saida">
+        <div class="saida__texto" id="divtexto">
+          <p id="textosaida"></p>
+          <button id="copiar">Copiar</button>
+        </div>
+        <div class="saida__content" id="divimagem">
+          <img src="img/High quality products 1 1.svg" alt="Pessoa procurando algo com uma lupa">
+          <h1 class="saida__titulo">Nenhuma mensagem encontrada</h1>
+          <p class="saida__descricao">Digite um texto que você deseja criptografar ou descriptografar.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <p>Desenvolvido por <a href="https://www.linkedin.com/in/deivid-esf/">Deivid Esteferson</a></p>
+  </footer>
+
+  <script src="codificador.js"></script>
+</body>
+
+</html>

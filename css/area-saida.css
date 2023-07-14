@@ -1,0 +1,52 @@
+.area-saida{
+  background-color: #fff;
+  border-radius: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+.saida__texto{
+  color: var(--azul);
+  width: 100%;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+#textosaida{
+  width: 100%;
+  max-height: 70vh;
+  font-size: 1.3rem;
+  word-break: break-word;
+  overflow-y: auto;
+}
+.saida__content{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.saida__titulo{
+  margin-top: 10px;
+  font-size: 24px;
+  color: var(--texto);
+  text-align: center;
+}
+.saida__descricao{
+  max-width: 75%;
+  text-align: center;
+  font-size: 16px;
+  color: #495057;
+  margin-top: 10px;
+}
+.saida__content img{
+  display: none;
+}
+
+@media screen and (width >=768px) {
+  .saida__content img{
+    display: inline;
+  }
+}

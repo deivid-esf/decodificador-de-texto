@@ -1,0 +1,68 @@
+.entrada__texto{
+  all: unset;
+  width: 100%;
+  height: 60vh;
+  font-size: 1.5rem;
+  word-break: break-word;
+  overflow-y: auto;
+}
+
+/*Estilo do aviso*/
+.entrada__aviso{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: 10px;
+}
+.entrada__aviso img{
+  width: 30px;
+  margin-right: 5px;
+}
+.entrada__aviso p{
+  font-size: .875rem;
+  color: var(--texto-menor);
+}
+
+/*Estilo dos botões*/
+.entrada__buttons{
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: 1fr;
+}
+@media screen and (width >= 120px) {
+  .entrada__buttons{
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+}
+.entrada__buttons button, #copiar{
+  all: unset;
+  height: 67px;
+  width: 100%;
+  font-size: 16px;
+  text-align: center;
+  color: #fff;
+  
+  background-color: var(--azul);
+  border-radius: 24px;
+  border: 1px solid #000;
+  box-shadow: 0 5px 5px #ccc;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+#criptografar:active{
+  background-color: var(--bg-azul);
+  color: var(--azul);
+  border-color: var(--azul);
+}
+#descriptografar, #copiar{
+  background-color: var(--bg-azul);
+  color: var(--azul);
+  box-shadow: none;
+  border-color: var(--azul);
+}
+#descriptografar:active, #copiar:active{
+  background-color: var(--azul);
+  color: #fff;
+  border-color: #000;
+}

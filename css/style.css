@@ -1,0 +1,207 @@
+@import url(https://fonts.googleapis.com/css?family=Inter:100,200,300,regular,500,600,700,800,900);
+
+
+/*Reset dos estilos padrões dos elementos*/
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+body{background-color: #F3F5FC;}
+/*Definição do tamanho do main e centralização do container principal */
+main{
+  min-height: 97vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container{
+  max-width: 1200px;
+  width: 100%;
+  height: 85vh;
+
+  display: grid; gap: 40px;
+  grid-template-columns: .5fr 3fr 2fr;
+}
+
+/*Estilização da área onde o texto será digitado*/
+.area-entrada{
+  height: 85%;
+  align-self: flex-end;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.entrada-texto{
+  all: unset;
+  color: #0A3871;
+  font-size: 32px;
+  height: 60%;
+  word-wrap: break-word;
+  overflow-y: auto;
+}
+.aviso{
+  display: flex;
+  color: #495057;
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+.aviso img{
+  margin-right: 5px;
+}
+
+/*Estilização dos botões*/
+.buttons{
+  display: grid; gap: 20px;
+  grid-template-columns: 1fr 1fr;
+}
+.buttons button, #copiar{
+  all: unset;
+  height: 67px;
+  width: 100%;
+  font-size: 16px;
+  text-align: center;
+  color: #fff;
+  
+  background-color: #0A3871;
+  border-radius: 24px;
+  border: 1px solid #000;
+  box-shadow: 0 5px 5px #ccc;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+#criptografar:active{
+  background-color: #D8DFE8;
+  color: #0A3871;
+  border-color: #0A3871;
+}
+#descriptografar, #copiar{
+  background-color: #D8DFE8;
+  color: #0A3871;
+  box-shadow: none;
+  border-color: #0A3871;
+}
+#descriptografar:active, #copiar:active{
+  background-color: #0A3871;
+  color: #fff;
+  border-color: #000;
+}
+/*Estilização da área onde o texto será processado*/
+.area-saida{
+  background-color: #fff;
+  border-radius: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding:20px;
+}
+.texto-saida{
+  color: #0A3871;
+  width: 100%;
+}
+
+.texto-saida{
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+
+}
+#textosaida{
+  width: 100%;
+  max-height: 70vh;
+
+  word-wrap: break-word;
+  overflow-y: auto;
+}
+.saida-content{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.saida-content h1{
+  margin-top: 10px;
+  font-size: 24px;
+  color: #343A40;
+  text-align: center;
+}
+.saida-content p{
+  max-width: 75%;
+  text-align: center;
+  font-size: 16px;
+  color: #495057;
+  margin-top: 10px;
+}
+.saida-content img{
+  width: 100%;
+}
+
+/* Estilização do footer */
+ footer{ 
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 3vh;
+  width: 100%;
+  background-color: #fff;
+
+}
+footer a{
+  text-decoration: none;
+  color: #0A3871;
+}
+
+
+/*Responsivo para telas de até 768px*/
+@media screen and (min-width: 478px) and (max-width: 768px) {
+  .container{
+    grid-template-columns: 1fr;
+    max-width: 710px;
+  }
+  .area-entrada{
+    min-height: 50vh;
+  }
+  .saida-content img{
+    display: none;
+  }
+}
+
+/*Responsivo para telas de até 375px*/
+@media screen and (max-width: 478px) {
+  .container{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    height: 100%;
+  }
+  .area-entrada{
+    width: 100%;
+    min-height: 50vh;
+  }
+  .buttons{
+    grid-template-columns: 1fr;
+  }
+
+  .logo{
+    align-self: flex-start;
+    justify-content: flex-start;
+  }
+  .area-saida{
+    min-height: 200px;
+  }
+  #textosaida{
+    max-height: 200px;
+    margin-bottom: 20px;
+  }
+  .buttons button{
+    width: 100%;
+  }
+  .saida-content img{
+    display: none;
+  }
+}
